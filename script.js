@@ -1,4 +1,4 @@
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 var passwordLengthprompt = window.prompt("How long would you like your password to be?")
 var confirmLowercase = window.confirm("Would you like lower case values?")
@@ -31,25 +31,25 @@ function generatePassword() {
 if (confirmLowercase) {
   console.log("Has lower case", confirmLowercase)
   possibleChars = possibleChars.concat(lowerCase)
-  console.log(possibleChars) // might need to change or maniulate result elsewhere
+  console.log(possibleChars) 
 }
 
 if (confirmUppercase) {
   console.log("Has upper case", confirmUppercase)
   possibleChars = possibleChars.concat(upperCase)
-  console.log(possibleChars) // might need to change or maniulate result elsewhere
+  console.log(possibleChars) 
 }
 
 if (confirmNumbers) {
   console.log("Has numbers", confirmNumbers)
   possibleChars = possibleChars.concat(possibleNumbers)
-  console.log(possibleChars) // might need to change or maniulate result elsewhere
+  console.log(possibleChars) 
 }
 
 if (confirmSpecial) {
   console.log("Has special characters", confirmSpecial)
   possibleChars = possibleChars.concat(specialChars)
-  console.log(possibleChars) // might need to change or maniulate result elsewhere
+  console.log(possibleChars) 
 }
 
 if (possibleChars.length == 0){
@@ -62,7 +62,7 @@ for (let i = 0; i < parsedPasswordlength; i++) {
 var passwordString = result.join("")
 return passwordString
 }
-// Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -71,5 +71,5 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
